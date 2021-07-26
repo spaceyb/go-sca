@@ -37,7 +37,7 @@ func (p *SQLInfo) printResults() {
 	printSQLBanner()
 	// Loop through found results and output to screen
 	for line := range p.SQLLine {
-		results := fmt.Sprintf("%s%d%s%s", "Line ", p.SQLLine[line]-1, " - ", strings.TrimSpace(p.Code[p.SQLLine[line]-1]))
+		results := fmt.Sprintf("%s%d%s%s", "Line ", p.SQLLine[line], " - ", strings.TrimSpace(p.Code[p.SQLLine[line]-1]))
 		fmt.Println(results)
 	}
 }

@@ -10,8 +10,10 @@ const missing_files_warning = "Source code file required as a parameter.\nExampl
 const sql = "Possible SQL Errors in the following"
 const command = "Possible Command Injection in the following"
 const urlredirection = "Possible URL redirection in the following"
-const socket = "Possible Socket"
-const miscinfo = "Possible misc info"
+const socket = "Possible Socket operations in the following"
+const miscinfo = "Possible misc info in the following"
+const fileaccess = "Possible file access in the following"
+const userinfo = "Possible User supplied info in the following"
 
 func printInfoBanner() {
 	fmt.Println(line)
@@ -46,6 +48,18 @@ func printSocketBanner() {
 func printMiscInfoBanner() {
 	fmt.Println(line)
 	fmt.Println(miscinfo)
+	fmt.Println(line)
+}
+
+func printFileInfoBanner() {
+	fmt.Println(line)
+	fmt.Println(fileaccess)
+	fmt.Println(line)
+}
+
+func printUserInfoBanner() {
+	fmt.Println(line)
+	fmt.Println(userinfo)
 	fmt.Println(line)
 }
 

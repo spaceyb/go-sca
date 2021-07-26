@@ -37,7 +37,7 @@ func (p *MiscInfo) printResults() {
 	printMiscInfoBanner()
 	// Loop through found results and output to screen
 	for line := range p.CommandLine {
-		results := fmt.Sprintf("%s%d%s%s", "Line ", p.CommandLine[line]-1, " - ", strings.TrimSpace(p.Code[p.CommandLine[line]-1]))
+		results := fmt.Sprintf("%s%d%s%s", "Line ", p.CommandLine[line], " - ", strings.TrimSpace(p.Code[p.CommandLine[line]-1]))
 		fmt.Println(results)
 	}
 }

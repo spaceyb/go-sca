@@ -13,7 +13,7 @@ type InjInfo struct {
 
 func getInjectionCommands() []string {
 	// Return a slice containing Injections to search for
-	return []string{"exec", "passthru", "popen", "proc_close", "proc_open", "proc_get_status", "proc_nice", "proc_terminate",
+	return []string{"exec", "popen", "proc_close", "proc_open", "proc_get_status", "proc_nice", "proc_terminate",
 		"shell_exec", "system", "eval", "assert", "call_user_func", "call_user_method", "create_function"}
 }
 
@@ -38,7 +38,7 @@ func (p *InjInfo) printResults() {
 	printCommandInjectionBanner()
 	// Loop through found results and output to screen
 	for line := range p.InjectionLine {
-		results := fmt.Sprintf("%s%d%s%s", "Line ", p.InjectionLine[line]-1, " - ", strings.TrimSpace(p.Code[p.InjectionLine[line]-1]))
+		results := fmt.Sprintf("%s%d%s%s", "Line ", p.InjectionLine[line], " - ", strings.TrimSpace(p.Code[p.InjectionLine[line]-1]))
 		fmt.Println(results)
 	}
 }

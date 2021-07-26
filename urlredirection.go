@@ -37,7 +37,7 @@ func (p *URLInfo) printResults() {
 	printURLRedirection()
 	// Loop through found results and output to screen
 	for line := range p.URLLine {
-		results := fmt.Sprintf("%s%d%s%s", "Line ", p.URLLine[line]-1, " - ", strings.TrimSpace(p.Code[p.URLLine[line]-1]))
+		results := fmt.Sprintf("%s%d%s%s", "Line ", p.URLLine[line], " - ", strings.TrimSpace(p.Code[p.URLLine[line]-1]))
 		fmt.Println(results)
 	}
 }

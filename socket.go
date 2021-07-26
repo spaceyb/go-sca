@@ -37,7 +37,7 @@ func (p *SocketInfo) printResults() {
 	printSocketBanner()
 	// Loop through found results and output to screen
 	for line := range p.SocketLine {
-		results := fmt.Sprintf("%s%d%s%s", "Line ", p.SocketLine[line]-1, " - ", strings.TrimSpace(p.Code[p.SocketLine[line]-1]))
+		results := fmt.Sprintf("%s%d%s%s", "Line ", p.SocketLine[line], " - ", strings.TrimSpace(p.Code[p.SocketLine[line]-1]))
 		fmt.Println(results)
 	}
 }
